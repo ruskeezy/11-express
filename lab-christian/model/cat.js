@@ -18,8 +18,8 @@ const Cat = module.exports = function(name, color) {
 Cat.createNote = function(_cat) {
   debug('createNote');
   try {
-    let note = new Cat(_cat.name, _cat.content);
-    return storage.createItem('note', note);
+    let cat = new Cat(_cat.name, _cat.content);
+    return storage.createItem('cat', cat);
   } catch (err) {
     return Promise.reject(err);
   }
@@ -27,6 +27,6 @@ Cat.createNote = function(_cat) {
 
 Cat.fetchNote = function(id) {
   debug('fetchNote');
-  return storage.fetchItem('note', id);
+  return storage.fetchItem('cat', id);
 };
 
