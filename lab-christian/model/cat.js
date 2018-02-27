@@ -15,8 +15,8 @@ const Cat = module.exports = function(name, color) {
   this.content = color;
 };
 
-Cat.createNote = function(_cat) {
-  debug('createNote');
+Cat.create = function(_cat) {
+  debug('create a cat');
   try {
     let cat = new Cat(_cat.name, _cat.content);
     return storage.createItem('cat', cat);
@@ -25,8 +25,13 @@ Cat.createNote = function(_cat) {
   }
 };
 
-Cat.fetchNote = function(id) {
-  debug('fetchNote');
+Cat.fetch = function(id) {
+  debug('fetch a cat');
   return storage.fetchItem('cat', id);
+};
+
+Cat.delete = function(id) {
+  debug('delete a cat');
+  return storage.deleteItem('cat', id);
 };
 
