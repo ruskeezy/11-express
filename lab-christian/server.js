@@ -4,7 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const createError = require('http-errors');
 const jsonParser = require('body-parser').json();
-const debug = require('debug')('note:server');
+const debug = require('debug')('cat:server');
 const Cat = require('./model/cat');
 
 const PORT = process.env.PORT || 3000;

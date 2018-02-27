@@ -22,7 +22,7 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "DEBUG='note*' node server.js"
+    "start": "DEBUG='cat*' node server.js"
   },
   "keywords": [],
   "author": "",
